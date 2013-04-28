@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>LISTA PADRON ELECTORAL</title>
+<link href="css/jquery-ui-1.7.1.custom.css" rel="stylesheet" type="text/css"/>
+<link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery-ui-1.7.1.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="js/ui.datepicker-es.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery.form.js" type="text/javascript" language="javascript"></script>
+<script src="js/script.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<div class="ui-widget">
+		<div class="ui-state-error ui-corner-all titulo" style="margin-top: 20px; padding: 0 .7em;"> 
+			<center><p><strong><h2>LISTA PADRON ELECTORAL</h2></strong></p></center>
+		</div>
+</div>
+<div id="menu">
+	<ul>
+		<li><a href="#m1">TODOS LOS DATOS</a></li>
+		<li><a href="#result" id="resul">Resultados</a></li>
+	</ul>
+	<div id="m1">
+		<form action="dataall.php" method="POST" id="f_all" onsubmit="clickk()">
+		<div id="dataall">
+		<h3><a href="#">Datos Personales</a></h3>
+		<div>
+		<p>
+		<table>
+		<tr>
+		<td>Apellido Paterno:</td><td><input type="text" name="ap_pa"/></td>
+		<td>Apellido Materno:</td><td><input type="text" name="ap_ma"/></td>
+		<td>Apellido de Esposo:</td><td><input type="text" name="ap_esp"/></td></tr>
+		<tr>
+		<td>Nombres:</td><td><input type="text" name="nombres"/></td>
+		<td>Sexo:</td><td><select name="sexo"><option value="" selected="selected">Elige Sexo</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></td>
+		<td>Estado Civil:</td><td><select name="estadocivil"><option value="">Elige Estado Civil</option><option value="casado">CASADO</option><option value="viudo">VIUDO</option><option value="soltero">SOLTERO</option><option value="divorciado">DIVORCIADO</option></select></td></tr>
+		<tr><td>Fecha de Nacimiento:</td><td><input type="text" id="fechanac" name="fechanac"/></td><td>Domicilio 1:</td><td><input type="text" name="dom1"/></td><td>Domicilio 2:</td><td><input type="text" name="dom2"/></td></tr>
+		</table>
+		</p>
+		</div>
+		<h3><a href="#">Documentos</a></h3>
+		<div>
+		<p>Tipo de Documento:<select name="tipodoc"><option value="" selected="selected">Elige Documento</option><option value="C.I.">C.I.</option><option value="Libreta Militar">Libreta Militar</option><option value="RUN">RUN</option><option value="Pasaporte">Pasaporte</option></select>
+		Numero Doc:<input type="text" name="numerodoc"/>
+		</p>
+		</div>
+		<h3><a href="#">Otros Datos</a></h3>
+		<div>
+		<p>
+		<table>
+		<tr><td>Numero de Ciudadano:</td><td><input type="text" name="numciudadano"/></td><td>Estado de Inscripcion:</td><td><select name="estado"><option value="" selected="selected">Elige Estado</option><option value="Habilitado">Habilitado</option><option value="Habilitado Observado">Habilitado Observado</option>
+		</select></td><td>Mesa:</td><td><input type="text" name="mesa"/></td></tr>
+		<tr><td>Fecha de Inscripcion:</td><td><input id="fechains" name="fechains"/></td><td>Lugar de Registro:</td><td><input type="text" name="lugarins"/></td></tr>
+		</table>
+		</p>
+		</div>
+		</div>
+		<p>
+		<a id="s_all" href="#" class="ui-state-default ui-corner-all boton"><span class="ui-icon ui-icon-check"></span>Buscar</a>
+		<a id="r_all" href="#" class="ui-state-default ui-corner-all boton"><span class="ui-icon ui-icon-close"></span>Nueva Busqueda</a>
+		</p>
+		</form>
+	</div>
+	<div id="result">
+		<div id="excel">
+		<form action="excel.php" method="post" target="_blank" id="f_excel">
+		<span id="exportar">Exportar a Excel<img src="images/export_to_excel.gif" /></span>
+		<input type="hidden" id="dataexcel" name="dataexcel" />
+		<input type="hidden" id="namefile" name="namefile" />
+		</form>
+		</div>
+		<div id="result1">
+		
+		</div>
+	</div>
+</div>
+</body>
+</html>
