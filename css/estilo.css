@@ -1,0 +1,10 @@
+body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 20px;background-image:url(images/back.gif);background-repeat:repeat-x;}
+h2{color:#2e6e9e;}
+.titulo{border:#2e6e9e solid 1px;background:#cfecfe;}
+.boton {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+.boton span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+tr.header td{padding:5px;}
+tr.body td{border: 1px solid #FFF;}
+tr.body:hover td{border: 1px solid #c6c6c6;background-color:#F0F5F7;}
+#exportar{cursor:pointer;}
+.loading{heigth:100%;background-image:url(../images/pbar-ani.gif);padding:5px;}
